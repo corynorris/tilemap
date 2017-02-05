@@ -1,0 +1,15 @@
+.Map table {
+  border-collapse: collapse;
+}
+td {
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+}
+td { 
+
+}
+img {
+  display:block;
+}
+
