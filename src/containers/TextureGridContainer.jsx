@@ -5,7 +5,7 @@ import { getSizes } from '../selectors';
 const mapStateToProps = (state, ownProps) => {
   return {
     texture: state.texture,
-    ...getSizes(state.settings),
+    ...getSizes(state),
     ...state.settings
   }
 }

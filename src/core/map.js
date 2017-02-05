@@ -1,5 +1,5 @@
 import { isArray } from './utils';
-import { generateDungeon } from './dungeon';
+// import { generateDungeon } from './dungeon';
 
 export const loadMapFile = (file) => {
   const reader = new FileReader();
@@ -20,29 +20,4 @@ export const loadMapFile = (file) => {
     };
     reader.readAsText(file);
   })
-}
-
-
-
-export function generateMap(width, height) {
-
-  const dungeon = generateDungeon(width, height);
-  // Edge Detection
-  // Horizontal Edges
-  // let test = {};
-  // for (let x = 0; x < width; x++) {
-  //   for (let y = 0; y < height; y++) {
-  //     const type = dungeon.get(x, y).type;
-  //     if (type === 'wall') {
-  //       const mask = dungeon.get8BitMask(x, y, 'wall');
-  //       dungeon.tiles[x][y].texture = parseInt(mask, 2);
-  //       test[parseInt(mask, 2)] = true;
-  //       // dungeon.tiles[x][y].orig = parseInt(mask, 2)+1;
-  //     } else if (type === 'floor') {
-  //       dungeon.tiles[x][y].texture = '16';
-  //     }
-  //   }
-  // }
-
-  return dungeon;
 }

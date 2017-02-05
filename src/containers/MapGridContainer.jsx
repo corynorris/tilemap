@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     tiles: state.map,
     textureMap: state.textureMap,
-    ...getSizes(state.settings),
+    ...getSizes(state),
     ...state.settings,
   }
 }
