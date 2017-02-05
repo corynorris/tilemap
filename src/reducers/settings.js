@@ -3,7 +3,7 @@ const initialState = {
   height: 100,
   tilesWide: 4,
   tilesHigh: 4,
-  scale: 1.5,
+  scale: 2,
 }
 
 export const settings = (state = initialState, action) => {

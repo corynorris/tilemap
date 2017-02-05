@@ -14,7 +14,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     dropHandler: (files) => {
       loadImage(files[0]).then((image) => {
-        console.log('img::',image);
         dispatch(loadTexture(image))
       }).catch((reason) => {
         alert(reason);
