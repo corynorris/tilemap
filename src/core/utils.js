@@ -3,5 +3,13 @@ export const range = (size, val) => {
 }
 
 export function isArray(obj) {
-  return Object.prototype.toString.call( obj ) === '[object Array]';
+  return Object.prototype.toString.call(obj) === '[object Array]';
+}
+
+export function parseJson(obj, msg) {
+  try {
+    return JSON.parse(this.responseText);
+  } catch (e) {
+    throw Error(msg)
+  }
 }

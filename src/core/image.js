@@ -12,17 +12,19 @@ export const getImage = (dataUri) => {
   });
 }
 
-export const loadImage = (file) => {
+export const loadImageFile = (file) => {
   const reader = new FileReader();
   return new Promise((resolve, reject) => {
     reader.onload = function (event) {
-      return getImage(event.target.result).then((image) => {
+      getImage(event.target.result).then((image) => {
         resolve({
           name: file.name,
           dataUri: event.target.result,
           width: image.width,
           height: image.height,
         });
+      }).catch((reason) => {
+        reject(reason);
       })
     };
     reader.readAsDataURL(file);

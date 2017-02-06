@@ -1,6 +1,6 @@
 const initialState = {
-  width: 100,
-  height: 100,
+  width: 64,
+  height: 64,
   tilesWide: 4,
   tilesHigh: 4,
   scale: 2,

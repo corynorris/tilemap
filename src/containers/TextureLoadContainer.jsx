@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { loadTexture } from '../actions';
-import { loadImage } from '../core/image.js';
+import { loadImageFile } from '../core/image.js';
 import FileLoader from '../presenters/FileLoader.jsx'
 
 const mapStateToProps = (state, ownProps) => {
@@ -13,7 +13,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     dropHandler: (files) => {
-      loadImage(files[0]).then((image) => {
+      loadImageFile(files[0]).then((image) => {
         dispatch(loadTexture(image))
       }).catch((reason) => {
         alert(reason);

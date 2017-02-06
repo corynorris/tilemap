@@ -1,18 +1,18 @@
-import { isArray } from './utils';
-// import { generateDungeon } from './dungeon';
+import { isArray, parseJson } from './utils';
 
 export const loadMapFile = (file) => {
   const reader = new FileReader();
   return new Promise((resolve, reject) => {
     reader.onload = function (event) {
       try {
-        const map = JSON.parse(event.target.result);
+        const map = parseJson(event.target.result,
+          "Not a valid JSON file.");
         if (typeof map !== 'undefined'
           && isArray(map.data)
           && isArray(map.data[0])) {
           resolve(map);
         } else {
-          throw Error('obj.map must be a 2D array');
+          throw Error('JSON detected, however the format must be { data: [[]] }.');
         }
       } catch (e) {
         reject(e.message);
