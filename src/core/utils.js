@@ -8,7 +8,7 @@ export function isArray(obj) {
 
 export function parseJson(obj, msg) {
   try {
-    return JSON.parse(this.responseText);
+    return JSON.parse(obj);
   } catch (e) {
     throw Error(msg)
   }
