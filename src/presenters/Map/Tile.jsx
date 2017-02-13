@@ -6,10 +6,10 @@ const Tile = ({
   tileHeight,
   tileWidth,
 }) => {
-
   if (typeof textureMap[value] === 'undefined') {
     return (
       <span style={{
+        pointerEvents: 'none',
         fontSize: `${tileWidth / 2}px`
       }}>{value}</span>
     );
@@ -19,6 +19,7 @@ const Tile = ({
       <img src={image}
         role="presentation"
         style={{
+          pointerEvents: 'none',
           width: '100%',
           height: '100%'
         }} />
