@@ -14,7 +14,7 @@ export default function generateDungeon(width, height) {
     return this.tiles[x][y];
   }
 
-  dungeon._check = (x, y, type) => {
+  dungeon.check = (x, y, type) => {
     return (this.get(x, y) && this.get(x, y).type === type);
   }
 
@@ -40,3 +40,12 @@ export default function generateDungeon(width, height) {
 
   return dungeon;
 }
+
+
+
+
+
+
+
+
+

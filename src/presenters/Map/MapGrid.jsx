@@ -18,13 +18,15 @@ export const Map = (props) => {
   const tileComponents = props.tiles.map((row, idx) => row.map((tile, tdx) => (
     <td
       key={tdx + idx * row.length}
-      onDragOver={(e) => { e.preventDefault() } }
+      onDragOver={(e) => { e.preventDefault() }}
       onDrop={handleDrop.bind(this, tile)}
       style={{
         width: tileWidth,
         height: tileHeight,
+        minWidth: tileWidth,
+        minHeight: tileHeight,
       }}
-      >
+    >
       <Tile {...props} value={tile} />
     </td>
   )));
