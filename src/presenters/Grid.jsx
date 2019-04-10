@@ -1,8 +1,6 @@
-import React from 'react';
+import React from "react";
 
-export const Grid = ({
-  components
-}) => {
+export const Grid = ({ components }) => {
   let rows = [];
   let curRow = [];
   for (let y = 0; y < components[0].length; y++) {
@@ -15,11 +13,9 @@ export const Grid = ({
 
   return (
     <table>
-      <tbody>
-        { rows }
-      </tbody>
+      <tbody>{rows}</tbody>
     </table>
   );
-}
+};
 
-export default Grid
+export default Grid;
