@@ -6,7 +6,7 @@ A drag and drop interface to associate tiles with their bitmask value. The tilem
 
 ## Demo
 
-https://tilemap.corynorris.me/
+https://corynorris.github.io/tilemap/
 
 ## Other Notes
 
